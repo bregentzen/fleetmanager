@@ -32,8 +32,25 @@ Route::get('/', function() {
     Route::get('manufacturers/delete/{id}', [ManufacturerController::class, 'getDelete']);
     Route::get('manufacturers/json', [ManufacturerController::class, 'getJson']);
 
+    Route::get('shipmodels', [ShipmodelController::class, 'getIndex']);
+    Route::get('shipmodels/index', [ShipmodelController::class, 'getIndex']);
+    Route::get('shipmodels/show/{id}', [ShipmodelController::class, 'getShow']);
+    Route::get('shipmodels/add', [ShipmodelController::class, 'getAdd']);
+    Route::post('shipmodels/save', [ShipmodelController::class, 'postSave']);
+    Route::get('shipmodels/edit/{id}', [ShipmodelController::class, 'getEdit']);
+    Route::post('shipmodels/update/{id}', [ShipmodelController::class, 'postUpdate']);
+    Route::get('shipmodels/delete/{id}', [ShipmodelController::class, 'getDelete']);
+    Route::get('shipmodels/json', [ShipmodelController::class, 'getJson']);
 
-    
+    Route::get('ships', [ShipController::class, 'getIndex']);
+    Route::get('ships/index', [ShipController::class, 'getIndex']);
+    Route::get('ships/show/{id}', [ShipController::class, 'getShow']);
+    Route::get('ships/add', [ShipController::class, 'getAdd']);
+    Route::post('ships/save', [ShipController::class, 'postSave']);
+    Route::get('ships/edit/{id}', [ShipController::class, 'getEdit']);
+    Route::post('ships/update/{id}', [ShipController::class, 'postUpdate']);
+    Route::get('ships/delete/{id}', [ShipController::class, 'getDelete']);
+    Route::get('ships/json', [ShipController::class, 'getJson']);
 
 //});
 
