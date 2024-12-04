@@ -25,6 +25,10 @@
             {{ html()->text('year_built')->class('form-control') }}
             {{ html()->label('Baujahr') }}
         </div>
+        <div class="form-floating mb-3">    
+            {{ html()->select('shipmodel_id', $shipmodels->pluck('name', 'id'))->class('form-control') }}
+            {{ html()->label('Shipmodel') }}
+        </div>
         {{ html()->submit('Speichern')->class('btn btn-success') }}
         <a href="{{url('ships')}}" class="btn btn-danger">Abbrechen</a>
 
