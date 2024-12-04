@@ -20,6 +20,9 @@
                 </tr>
                 <tr>
                     <td>Baujahr</td><td>{{ $entity->year_built}}</td>
+                </tr>
+                <tr>
+                    <td>Schiffsmodell</td><td>{{ $entity->shipmodel->name}}</td>
                 </tr>    
             </tbody>
         </table>

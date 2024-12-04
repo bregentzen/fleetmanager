@@ -8,7 +8,10 @@
                 
                 <tr>
                     <td>Name</td><td>{{ $entity->name}}</td>
-                </tr>    
+                </tr>
+                <tr>
+                    <td>Hersteller</td><td>{{ $entity->manufacturer->name}}</td>
+                </tr>     
             </tbody>
         </table>
         <a href="{{url('shipmodels')}}" class="btn btn-danger">Zurück</a>

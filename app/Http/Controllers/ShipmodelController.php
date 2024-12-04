@@ -17,6 +17,12 @@ class ShipmodelController extends Controller
         'manufacturer_id' => 'required'
     ];
 
+    public function getShow($id)
+    {
+        $entity = Shipmodel::with('manufacturer')->findOrFail($id);
+        return view('shipmodels.show', compact('entity'));
+    }
+
     public function getAdd()
     {
         $manufacturers = Manufacturer::all();

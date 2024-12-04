@@ -21,6 +21,12 @@ class ShipController extends Controller
         'shipmodel_id' => 'required'
     ];
 
+    public function getShow($id)
+    {
+        $entity = Ship::with('shipmodel')->findOrFail($id);
+        return view('ships.show', compact('entity'));
+    }
+
     public function getAdd()
     {
         $shipmodels = Shipmodel::all();
